@@ -1,4 +1,9 @@
-
+body{
+    background-image: url(./starry-night-sky-background-illustration-vector.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
 
 
 .galaxy{
@@ -11,11 +16,11 @@
 }
 
 .sun{
-    height: 100px;
-    width: 100px;
+    height: 7vw;
+    width:7vw;
     background-color: rgb(212, 93, 67);
     border-radius: 50%;
-    box-shadow: 0px 0px 100px #e30505  ;
+    box-shadow: 0px 0px  40px 2vw #e30505  ;
 
 }
 .planet{
@@ -40,64 +45,64 @@
 
 
 .mercury{
-    --planetSize:30px;
-    --revolutionSpeed:2s;
+    --planetSize:2vw;
+    --revolutionSpeed:0.8s;
     background-color: rgb(255, 0, 0);
-    --orbitSize:125px;
+    --orbitSize:10vw;
 }
 .venus{
-    --planetSize:50px;
+    --planetSize:3vw;
     background-color:brown;
-    --orbitSize:200px;
-    --revolutionSpeed:3s;
+    --orbitSize:15vw;
+    --revolutionSpeed:1.2s;
 
 
 }
 .earth{
-    --planetSize:50px;
+    --planetSize:4vw;
     background-color:rgb(25, 187, 112);
-    --orbitSize:275px;
-    --revolutionSpeed:4s;
-
-
-}
-.mars{
-    --planetSize:50px;
-    background-color:rgb(184, 121, 11);
-    --orbitSize:350px;
+    --orbitSize:20vw;
     --revolutionSpeed:5s;
 
 
 }
-.jupiter{
-    --planetSize:90px;
-    background-color:rgb(233, 193, 144);
-    --orbitSize:450px;
-    --revolutionSpeed:6s;
-
-
-}
-.saturn{
-    --planetSize:60px;
-    background-color:rgb(146, 220, 225);
-    --orbitSize:550px;
+.mars{
+    --planetSize:3vw;
+    background-color:rgb(184, 121, 11);
+    --orbitSize:25vw;
     --revolutionSpeed:7s;
 
 
 }
+.jupiter{
+    --planetSize:6vw;
+    background-color:rgb(233, 193, 144);
+    --orbitSize:32vw;
+    --revolutionSpeed:12s;
+
+
+}
+.saturn{
+    --planetSize:9vw;
+    background-color:rgb(146, 220, 225);
+    --orbitSize:35vw;
+    --revolutionSpeed:17s;
+
+
+}
 .uranus{
-    --planetSize:50px;
+    --planetSize:4vw;
     background-color:rgb(94, 176, 253);
-    --orbitSize:575px;
-    --revolutionSpeed:8s;
+    --orbitSize:40vw;
+    --revolutionSpeed:25s;
 
 
 }
 .neptune{
-    --planetSize:50px;
+    --planetSize:3vw;
     background-color:rgb(12, 11, 95);
-    --orbitSize:675px;
-    --revolutionSpeed:9s;
+    --orbitSize:45vw;
+    --revolutionSpeed:30s;
 
 
 }
