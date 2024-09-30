@@ -14,95 +14,122 @@ body{
     width:100vw;
 
 }
+.milkyway{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    
+}
 
 .sun{
-    height: 7vw;
-    width:7vw;
-    background-color: rgb(222, 115, 91);
+    height:min(8vw, 8vh);
+    width:min(8vw, 8vh);
     border-radius: 50%;
-    box-shadow: 0px 0px  40px 3px #f08c8c  ;
+    background-color: rgb(255, 127, 92);
+    box-shadow: 0 0  1vw 1vw  rgb(248, 112, 74);
 
 }
 .planet{
+    position: absolute;
+    border-radius:50%;
     height: var(--planetSize);
     width: var(--planetSize);
+
     transform: translate(var(--orbitSize));
-    border-radius:50%;
-    border:1px solid #a09e9e;
     animation: revolution var(--revolutionSpeed) linear infinite;
-    position: absolute;
+    box-shadow: inset calc(var(--planetSize)/3) 0  calc(var(--planetSize)/2.5)  black;
+
+   
 
 }
 
-@keyframes revolution{
-    from{
-        transform: rotate(0deg) translate(var(--orbitSize));
-    }
-    to{
-        transform: rotate(360deg) translate(var(--orbitSize))
-    }
+.orbit{
+    
+    height:var(--planetOrbitSize);
+    width:var(--planetOrbitSize);
+    background-color: aliceblue;
+      
 }
 
 
 .mercury{
-    --planetSize:2vw;
-    --revolutionSpeed:0.8s;
+    position: absolute;
+    --planetSize:min(1.5vw, 1.5vh);
+    --revolutionSpeed:3s;
     background-color: rgb(255, 0, 0);
-    --orbitSize:10vw;
+    --orbitSize:min(9vw, 9vh);
+    transform: translate(30px 0);
+    --initialRotation:120deg;
+    border:1px solid;
+    --planetOrbitSize:min(9vw, 9vh);
+    
 }
+
+
 .venus{
-    --planetSize:3vw;
+    --planetSize:min(3vw, 3vh);
     background-color:brown;
-    --orbitSize:15vw;
-    --revolutionSpeed:1.2s;
-
-
+    --orbitSize:min(12.3vw, 12.3vh);
+    --revolutionSpeed:6s;
+    --initialRotation:10deg;
+    
 }
 .earth{
-    --planetSize:4vw;
+    --planetSize:min(3.5vw, 3.5vh);
     background-color:rgb(25, 187, 112);
-    --orbitSize:20vw;
-    --revolutionSpeed:5s;
-
-
+    --orbitSize:min(17vw, 17vh);
+    --revolutionSpeed:10s;
+    --initialRotation:250deg;
+    
+    
 }
 .mars{
-    --planetSize:3vw;
+    --planetSize:min(3vw, 3vh);
     background-color:rgb(184, 121, 11);
-    --orbitSize:25vw;
-    --revolutionSpeed:7s;
-
-
+    --orbitSize:min(22vw, 22vh);
+    --revolutionSpeed:15s;
+    --initialRotation:360deg;
+    
 }
 .jupiter{
-    --planetSize:6vw;
+    --planetSize:min(6vw, 6vh);
     background-color:rgb(233, 193, 144);
-    --orbitSize:32vw;
-    --revolutionSpeed:12s;
-
-
+    --orbitSize:min(28.7vw, 28.7vh);
+    --revolutionSpeed:25s;
+    --initialRotation:180deg;
+    
 }
 .saturn{
-    --planetSize:9vw;
+    --planetSize:min(4.5vw, 4.5vh);
     background-color:rgb(146, 220, 225);
-    --orbitSize:35vw;
-    --revolutionSpeed:17s;
-
-
+    --orbitSize:min(35.7vw, 35.7vh);
+    --revolutionSpeed:30s;
+    --initialRotation:90deg;
+    
 }
 .uranus{
-    --planetSize:4vw;
+    --planetSize:min(4vw, 4vh);
     background-color:rgb(94, 176, 253);
-    --orbitSize:40vw;
-    --revolutionSpeed:25s;
-
-
+    --orbitSize:min(42vw, 42vh);
+    --revolutionSpeed:45s;
+    --initialRotation:60deg;
+    
 }
 .neptune{
-    --planetSize:3vw;
+    --planetSize:min(3vw, 3vh);
     background-color:rgb(12, 11, 95);
-    --orbitSize:45vw;
-    --revolutionSpeed:30s;
-
-
+    --orbitSize:min(48vw, 48vh);
+    --revolutionSpeed:60s;
+    --initialRotation:200deg;
+    
+    /* @keyframes revolution{
+        from{
+            transform:rotate(var(--initialRotation)) translate(var(--orbitSize)) rotate(180deg);
+        }
+        to{
+            transform: rotate(calc(360deg + var(--initialRotation)))  translate(var(--orbitSize)) rotate(180deg);
+        }
+    } */
 }
