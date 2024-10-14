@@ -1,5 +1,5 @@
 body{
-    background-image: url(./starry-night-sky-background-illustration-vector.jpg);
+    background-image: url(./Assets/Images/starry-night-sky-background-illustration-vector.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -32,6 +32,9 @@ body{
 
 }
 .planet{
+    background-size: cover;
+
+    border: none;
     position: absolute;
     border-radius:50%;
     height: var(--planetSize);
@@ -41,9 +44,8 @@ body{
     animation: revolution var(--revolutionSpeed) linear infinite;
     box-shadow: inset calc(var(--planetSize)/3) 0  calc(var(--planetSize)/2.5)  black;
 
-   
-
 }
+
 
 .orbit{
     
@@ -55,20 +57,21 @@ body{
 
 
 .mercury{
-    position: absolute;
+    background-image: url(./Assets/Images/Mercury.jpg);
     --planetSize:min(1.5vw, 1.5vh);
     --revolutionSpeed:3s;
     background-color: rgb(255, 0, 0);
     --orbitSize:min(9vw, 9vh);
-    transform: translate(30px 0);
     --initialRotation:120deg;
     border:1px solid;
-    --planetOrbitSize:min(9vw, 9vh);
+    /* --planetOrbitSize:min(9vw, 9vh); */
     
 }
 
 
 .venus{
+    background-image: url(./Assets/Images/Venus.jpg);
+
     --planetSize:min(3vw, 3vh);
     background-color:brown;
     --orbitSize:min(12.3vw, 12.3vh);
@@ -77,6 +80,8 @@ body{
     
 }
 .earth{
+    background-image: url(./Assets/Images/earth.jpg);
+
     --planetSize:min(3.5vw, 3.5vh);
     background-color:rgb(25, 187, 112);
     --orbitSize:min(17vw, 17vh);
@@ -86,6 +91,8 @@ body{
     
 }
 .mars{
+    background-image: url(./Assets/Images/mars.jpg);
+
     --planetSize:min(3vw, 3vh);
     background-color:rgb(184, 121, 11);
     --orbitSize:min(22vw, 22vh);
@@ -94,6 +101,8 @@ body{
     
 }
 .jupiter{
+    background-image: url(./Assets/Images/jupiter.jpg);
+
     --planetSize:min(6vw, 6vh);
     background-color:rgb(233, 193, 144);
     --orbitSize:min(28.7vw, 28.7vh);
@@ -102,6 +111,8 @@ body{
     
 }
 .saturn{
+    background-image: url(./Assets/Images/saturn.jpg);
+
     --planetSize:min(4.5vw, 4.5vh);
     background-color:rgb(146, 220, 225);
     --orbitSize:min(35.7vw, 35.7vh);
@@ -110,6 +121,8 @@ body{
     
 }
 .uranus{
+    background-image: url(./Assets/Images/uranus.jpg);
+
     --planetSize:min(4vw, 4vh);
     background-color:rgb(94, 176, 253);
     --orbitSize:min(42vw, 42vh);
@@ -118,11 +131,14 @@ body{
     
 }
 .neptune{
+    background-image: url(./Assets/Images/neptune.jpg);
+
     --planetSize:min(3vw, 3vh);
     background-color:rgb(12, 11, 95);
     --orbitSize:min(48vw, 48vh);
     --revolutionSpeed:60s;
     --initialRotation:200deg;
+}
     
     @keyframes revolution{
         from{
@@ -132,4 +148,3 @@ body{
             transform: rotate(calc(360deg + var(--initialRotation)))  translate(var(--orbitSize)) rotate(180deg);
         }
     }
-}
