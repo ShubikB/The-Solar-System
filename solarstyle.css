@@ -124,12 +124,12 @@ body{
     --revolutionSpeed:60s;
     --initialRotation:200deg;
     
-    /* @keyframes revolution{
+    @keyframes revolution{
         from{
             transform:rotate(var(--initialRotation)) translate(var(--orbitSize)) rotate(180deg);
         }
         to{
             transform: rotate(calc(360deg + var(--initialRotation)))  translate(var(--orbitSize)) rotate(180deg);
         }
-    } */
+    }
 }
