@@ -1,6 +1,7 @@
 body{
     background-image: url(./Assets/Images/background.jpg);
-    
+    background-repeat: no-repeat;
+    overflow: hidden;
 
 }
 
@@ -26,8 +27,9 @@ body{
     height:min(8vw, 8vh);
     width:min(8vw, 8vh);
     border-radius: 50%;
-    background-image:linear-gradient(to right, rgba(255,0,0,1), rgb(255, 255, 255),  rgba(255,0,0,1)); 
-    box-shadow: 0 0  1vw 1vw  rgb(248, 112, 74);
+    background-color: rgb(255, 216, 167); 
+    box-shadow: 0 0  5vw 1.2vw  rgb(254, 233, 208);
+
 
 }
 .planet{
